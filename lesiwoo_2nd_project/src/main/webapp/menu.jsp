@@ -61,7 +61,10 @@
     			}
     			
     			
-    			String currentTime=am_pm+" "+hour+":"+minute+":"+second+" "+am_pm;
+    			// String currentTime=am_pm+" "+df.format(hour)+":"+df.format(minute)+":"+df.format(second)+" "+am_pm;
+    			// out.println("현재 접속 시각: "+ currentTime+ "\n");
+    			
+    			String currentTime=am_pm+" "+((hour<10) ? "0" : "")+hour+":"+((minute<10) ? "0" : "")+minute+":"+ ((second<10) ? "0" : "")+ second+" "+am_pm;
     			out.println("현재 접속 시각: "+ currentTime+ "\n");
     		%>
     	</h3>
